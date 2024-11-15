@@ -481,20 +481,21 @@ class DataBase():
             self.close_connection()                                                        
 
 
-    def pesquisar_moradores(self, apartamento_bloco=None):
+    def pesquisar_moradores_por_apartamento(self, apartamento_bloco):
         try:
             self.connect()
             cursor = self.connection.cursor()
-            query = "SELECT * FROM moradores WHERE 1=1"
-            params = []
-            if apartamento_bloco:
-                query += " AND apartamento_bloco = ?"
-                params.append(apartamento_bloco)
-            cursor.execute(query, params)
+            cursor.execute("""
+                SELECT apartamento_bloco, nome_completo, data_nascimento, telefone1, telefone2, email1, email2, 
+                    veiculo1_placa, veiculo1_marca, veiculo1_modelo, veiculo1_cor, 
+                    veiculo2_placa, veiculo2_marca, veiculo2_modelo, veiculo2_cor, observacoes
+                FROM moradores
+                WHERE apartamento_bloco = ?
+            """, (apartamento_bloco,))
             resultados = cursor.fetchall()
             return resultados
         except Exception as e:
-            print(e)
+            raise Exception(f"Erro ao pesquisar moradores: {e}")
         finally:
             self.close_connection()
 
@@ -614,12 +615,27 @@ class DataBase():
                 params.append(f"%{nome_retirou}%")
             cursor.execute(query, params)
             resultados = cursor.fetchall()
+            print(f"Query executada: {query}")
+            print(f"Parâmetros: {params}")
+            print(f"Resultados: {resultados}")
             return resultados
         except Exception as e:
             print(e)
         finally:
             self.close_connection()
 
+    def listar_todas_encomendas(self):
+        try:
+            self.connect()
+            cursor = self.connection.cursor()
+            cursor.execute("SELECT * FROM encomendas")
+            resultados = cursor.fetchall()
+            print(f"Todas as encomendas: {resultados}")
+            return resultados
+        except Exception as e:
+            print(e)
+        finally:
+            self.close_connection()        
 
     def pesquisar_ocorrencias(self, data_ocorrencia=None, nome_funcionario=None, hora_registro=None, data_registro=None, descricao=None):
         try:

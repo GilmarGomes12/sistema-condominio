@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
     QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
     QVBoxLayout, QWidget)
-import icons_system_rc as icons_system_rc
+import icons_system_rc
 
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
@@ -89,13 +89,26 @@ class Ui_LoginWindow(object):
         self.txt_user.setMinimumSize(QSize(120, 30))
         font1 = QFont()
         font1.setPointSize(10)
+        font1.setBold(False)
         self.txt_user.setFont(font1)
         self.txt_user.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_user.setStyleSheet(u"# QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
-"}")
+        self.txt_user.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+" }\n"
+"QLineEdit::placeholder {\n"
+"     background-color: black;\n"
+" }\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+" }\n"
+"QLineEdit:disabled {\n"
+"    background-color: lightpink; \n"
+"}\n"
+"")
         self.txt_user.setAlignment(Qt.AlignCenter)
+        self.txt_user.setDragEnabled(False)
+        self.txt_user.setPlaceholderText(u"User")
+        self.txt_user.setCursorMoveStyle(Qt.VisualMoveStyle)
 
         self.verticalLayout.addWidget(self.txt_user, 0, Qt.AlignHCenter)
 
@@ -121,10 +134,15 @@ class Ui_LoginWindow(object):
         self.txt_password.setMinimumSize(QSize(120, 30))
         self.txt_password.setFont(font1)
         self.txt_password.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_password.setStyleSheet(u"# QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
-"}")
+        self.txt_password.setStyleSheet(u"QLineEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: lightpink; \n"
+"   }")
         self.txt_password.setEchoMode(QLineEdit.Password)
         self.txt_password.setAlignment(Qt.AlignCenter)
 
@@ -152,7 +170,7 @@ class Ui_LoginWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}")
 
@@ -174,9 +192,8 @@ class Ui_LoginWindow(object):
 
     def retranslateUi(self, LoginWindow):
         LoginWindow.setWindowTitle(QCoreApplication.translate("LoginWindow", u"MainWindow", None))
-        self.label.setText(QCoreApplication.translate("LoginWindow", u"<html><head/><body><p align=\"center\"><img src=\":/imgs/_imgs/Login.png\"/></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("LoginWindow", u"<html><head/><body><p align=\"center\"><img src=\":/_imgs/_imgs/Login.png\"/></p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("LoginWindow", u"<html><head/><body><p><span style=\" color:#ffffff;\">Usu\u00e1rio</span></p></body></html>", None))
-        self.txt_user.setPlaceholderText(QCoreApplication.translate("LoginWindow", u"User", None))
         self.label_3.setText(QCoreApplication.translate("LoginWindow", u"<html><head/><body><p><span style=\" color:#ffffff;\">Senha</span></p></body></html>", None))
         self.txt_password.setPlaceholderText(QCoreApplication.translate("LoginWindow", u"Password", None))
         self.btn_login.setText(QCoreApplication.translate("LoginWindow", u"Login", None))

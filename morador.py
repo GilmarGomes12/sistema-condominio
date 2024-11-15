@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMessageBox, QTableWidgetItem
+from PySide6.QtWidgets import QMessageBox, QTableWidgetItem, QTableWidget
 from PySide6.QtCore import Qt
 from database import DataBase
 
@@ -70,22 +70,20 @@ def cadastrar_morador(self):
 def pesquisar_morador(self):
     apartamento_bloco = self.txt_pesquisa_apartamento_bloco.text()
 
-    db = DataBase() 
-
     try:
-        resultados = db.pesquisar_moradores(apartamento_bloco)
+        db_connection = DataBase()
+        resultados = db_connection.pesquisar_moradores_por_apartamento(apartamento_bloco)
 
-        self.tableWidget.setRowCount(0) 
+        self.tableWidget.setRowCount(0)  # Limpa a tabela antes de inserir novos dados
 
         for row_number, row_data in enumerate(resultados):
             self.tableWidget.insertRow(row_number)
             for column_number, data in enumerate(row_data):
                 item = QTableWidgetItem(str(data))
-
-                item.setFlags(item.flags() ^ Qt.ItemIsEditable) 
+                item.setFlags(item.flags() ^ Qt.ItemIsEditable)
                 self.tableWidget.setItem(row_number, column_number, item)
 
-    except Exception as e:  
+    except Exception as e:
         QMessageBox.critical(self, "Erro", f"Erro ao pesquisar: {e}")
         print(f"Erro na pesquisa: {e}")
-        return     
+        return

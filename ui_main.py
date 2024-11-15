@@ -15,11 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
-    QFrame, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QScrollArea,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTabWidget,
-    QTableView, QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QScrollArea, QSizePolicy,
+    QSpacerItem, QStackedWidget, QTabWidget, QTableWidget,
+    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
 import icons_system_rc
 
 class Ui_MainWindow(object):
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
         self.btn_home.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -85,7 +85,7 @@ class Ui_MainWindow(object):
         self.btn_menu_moradores.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         self.btn_menu_agendamentos.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.btn_menu_visitantes.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -127,7 +127,7 @@ class Ui_MainWindow(object):
         self.btn_menu_prestadores.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -141,7 +141,7 @@ class Ui_MainWindow(object):
         self.btn_menu_encomendas.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -155,7 +155,7 @@ class Ui_MainWindow(object):
         self.btn_menu_ocorrencias.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -169,7 +169,7 @@ class Ui_MainWindow(object):
         self.btn_menu_funcionarios.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -183,7 +183,7 @@ class Ui_MainWindow(object):
         self.btn_menu_domesticos.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -197,7 +197,7 @@ class Ui_MainWindow(object):
         self.btn_menu_mudancas.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -211,7 +211,7 @@ class Ui_MainWindow(object):
         self.btn_menu_sobre.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -225,7 +225,7 @@ class Ui_MainWindow(object):
         self.btn_menu_contatos.setStyleSheet(u"QPushButton{color:#fff;}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
 
@@ -262,18 +262,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.toogle_Button = QPushButton(self.top_frame)
         self.toogle_Button.setObjectName(u"toogle_Button")
-        self.toogle_Button.setStyleSheet(u"QPushButton{color:#fff;}\n"
+        self.toogle_Button.setStyleSheet(u"QPushButton{\n"
+"	color:#D3D3D3;\n"
+"}\n"
 "\n"
 "QPushButton:hover{\n"
-"	background-color:  rgb(255, 255, 255);\n"
+"	background-color:  rgb(135,206,235);\n"
 " 	color:black\n"
 " }")
         icon = QIcon()
-        icon.addFile(u":/imgs/_imgs/menu.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u"_imgs/menu.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.toogle_Button.setIcon(icon)
         self.toogle_Button.setIconSize(QSize(32, 32))
 
-        self.horizontalLayout_3.addWidget(self.toogle_Button, 0, Qt.AlignLeft)
+        self.horizontalLayout_3.addWidget(self.toogle_Button)
 
         self.label = QLabel(self.top_frame)
         self.label.setObjectName(u"label")
@@ -322,7 +324,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}")
 
@@ -368,10 +370,18 @@ class Ui_MainWindow(object):
         font2.setPointSize(10)
         self.txt_nome.setFont(font2)
         self.txt_nome.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_nome.setStyleSheet(u"# QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
-"}")
+        self.txt_nome.setStyleSheet(u"QLineEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: lightpink; \n"
+"   }\n"
+"	QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }")
 
         self.horizontalLayout_5.addWidget(self.txt_nome)
 
@@ -397,10 +407,18 @@ class Ui_MainWindow(object):
         self.txt_user.setMinimumSize(QSize(0, 30))
         self.txt_user.setFont(font2)
         self.txt_user.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_user.setStyleSheet(u" #QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
-"}")
+        self.txt_user.setStyleSheet(u"QLineEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: lightpink; \n"
+"   }\n"
+"	QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }")
 
         self.horizontalLayout_7.addWidget(self.txt_user)
 
@@ -424,10 +442,18 @@ class Ui_MainWindow(object):
         self.txt_senha.setMinimumSize(QSize(0, 30))
         self.txt_senha.setFont(font2)
         self.txt_senha.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_senha.setStyleSheet(u" #QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
-"}")
+        self.txt_senha.setStyleSheet(u"QLineEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: lightpink; \n"
+"   }\n"
+"	QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }")
         self.txt_senha.setEchoMode(QLineEdit.Password)
 
         self.horizontalLayout_9.addWidget(self.txt_senha)
@@ -452,12 +478,21 @@ class Ui_MainWindow(object):
         self.txt_senha_2.setMinimumSize(QSize(0, 30))
         self.txt_senha_2.setFont(font2)
         self.txt_senha_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_senha_2.setStyleSheet(u" #QLineEdit {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border: 1px solid rgb(255, 206, 206);\n"
+        self.txt_senha_2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
 "}\n"
 "\n"
-"")
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: lightpink; \n"
+"}")
         self.txt_senha_2.setEchoMode(QLineEdit.Password)
 
         self.horizontalLayout_8.addWidget(self.txt_senha_2)
@@ -493,10 +528,14 @@ class Ui_MainWindow(object):
         self.cb_perfil.setFont(font3)
         self.cb_perfil.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.cb_perfil.setStyleSheet(u"QComboBox{\n"
-"color:#fff;\n"
-"border:1px solid white; \n"
-"background-color:rgba(85, 115, 155,1);font-family:Trebuchet MS;\n"
-"font-size:18px}")
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
         self.cb_perfil.setEditable(False)
 
         self.horizontalLayout_10.addWidget(self.cb_perfil)
@@ -521,7 +560,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}")
 
@@ -550,7 +589,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue; \n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -569,7 +608,7 @@ class Ui_MainWindow(object):
         self.scrollArea_6.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 695, 1278))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, -783, 695, 1278))
         self.verticalLayout_58 = QVBoxLayout(self.scrollAreaWidgetContents_6)
         self.verticalLayout_58.setObjectName(u"verticalLayout_58")
         self.frame_45 = QFrame(self.scrollAreaWidgetContents_6)
@@ -594,6 +633,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_bloco.setMinimumSize(QSize(0, 30))
         self.txt_apartamento_bloco.setFont(font2)
         self.txt_apartamento_bloco.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_bloco.setStyleSheet(u"QLineEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }\n"
+"	QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }")
 
         self.verticalLayout_81.addWidget(self.txt_apartamento_bloco, 0, Qt.AlignLeft)
 
@@ -610,6 +661,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo.setFont(font2)
         self.txt_nome_completo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo)
 
@@ -618,6 +684,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento.setFont(font2)
         self.txt_data_nascimento.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento)
 
@@ -626,6 +707,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo2.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo2.setFont(font2)
         self.txt_nome_completo2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo2)
 
@@ -634,6 +730,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento2.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento2.setFont(font2)
         self.txt_data_nascimento2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento2)
 
@@ -642,6 +753,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo3.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo3.setFont(font2)
         self.txt_nome_completo3.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo3.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo3)
 
@@ -650,6 +776,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento3.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento3.setFont(font2)
         self.txt_data_nascimento3.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento3.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento3)
 
@@ -658,6 +799,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo4.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo4.setFont(font2)
         self.txt_nome_completo4.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo4.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo4)
 
@@ -666,6 +822,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento4.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento4.setFont(font2)
         self.txt_data_nascimento4.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento4.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento4)
 
@@ -674,6 +845,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo5.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo5.setFont(font2)
         self.txt_nome_completo5.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo5.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo5)
 
@@ -682,6 +868,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento5.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento5.setFont(font2)
         self.txt_data_nascimento5.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento5.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento5)
 
@@ -690,6 +891,21 @@ class Ui_MainWindow(object):
         self.txt_nome_completo6.setMinimumSize(QSize(0, 30))
         self.txt_nome_completo6.setFont(font2)
         self.txt_nome_completo6.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_completo6.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_nome_completo6)
 
@@ -698,6 +914,21 @@ class Ui_MainWindow(object):
         self.txt_data_nascimento6.setMinimumSize(QSize(0, 30))
         self.txt_data_nascimento6.setFont(font2)
         self.txt_data_nascimento6.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_nascimento6.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_62.addWidget(self.txt_data_nascimento6)
 
@@ -717,6 +948,21 @@ class Ui_MainWindow(object):
         self.txt_telefone1.setMinimumSize(QSize(0, 30))
         self.txt_telefone1.setFont(font2)
         self.txt_telefone1.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_telefone1.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_57.addWidget(self.txt_telefone1)
 
@@ -730,6 +976,21 @@ class Ui_MainWindow(object):
         self.txt_telefone2.setMinimumSize(QSize(0, 30))
         self.txt_telefone2.setFont(font2)
         self.txt_telefone2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_telefone2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_57.addWidget(self.txt_telefone2)
 
@@ -743,6 +1004,21 @@ class Ui_MainWindow(object):
         self.txt_email1.setMinimumSize(QSize(0, 30))
         self.txt_email1.setFont(font2)
         self.txt_email1.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_email1.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_57.addWidget(self.txt_email1)
 
@@ -756,6 +1032,21 @@ class Ui_MainWindow(object):
         self.txt_email2.setMinimumSize(QSize(0, 30))
         self.txt_email2.setFont(font2)
         self.txt_email2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_email2.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_57.addWidget(self.txt_email2)
 
@@ -784,6 +1075,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo1_placa.setMinimumSize(QSize(0, 30))
         self.txt_veiculo1_placa.setFont(font2)
         self.txt_veiculo1_placa.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo1_placa.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: Black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_59.addWidget(self.txt_veiculo1_placa)
 
@@ -792,6 +1098,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo1_marca.setMinimumSize(QSize(0, 30))
         self.txt_veiculo1_marca.setFont(font2)
         self.txt_veiculo1_marca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo1_marca.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_59.addWidget(self.txt_veiculo1_marca)
 
@@ -800,6 +1121,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo1_modelo.setMinimumSize(QSize(0, 30))
         self.txt_veiculo1_modelo.setFont(font2)
         self.txt_veiculo1_modelo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo1_modelo.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_59.addWidget(self.txt_veiculo1_modelo)
 
@@ -808,6 +1144,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo1_cor.setMinimumSize(QSize(0, 30))
         self.txt_veiculo1_cor.setFont(font2)
         self.txt_veiculo1_cor.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo1_cor.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_59.addWidget(self.txt_veiculo1_cor)
 
@@ -830,6 +1181,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo2_placa.setMinimumSize(QSize(0, 30))
         self.txt_veiculo2_placa.setFont(font2)
         self.txt_veiculo2_placa.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo2_placa.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_60.addWidget(self.txt_veiculo2_placa)
 
@@ -838,6 +1204,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo2_marca.setMinimumSize(QSize(0, 30))
         self.txt_veiculo2_marca.setFont(font2)
         self.txt_veiculo2_marca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo2_marca.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_60.addWidget(self.txt_veiculo2_marca)
 
@@ -846,6 +1227,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo2_modelo.setMinimumSize(QSize(0, 30))
         self.txt_veiculo2_modelo.setFont(font2)
         self.txt_veiculo2_modelo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo2_modelo.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_60.addWidget(self.txt_veiculo2_modelo)
 
@@ -854,6 +1250,21 @@ class Ui_MainWindow(object):
         self.txt_veiculo2_cor.setMinimumSize(QSize(0, 30))
         self.txt_veiculo2_cor.setFont(font2)
         self.txt_veiculo2_cor.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_veiculo2_cor.setStyleSheet(u"QLineEdit {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"    color: black; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    background-color: SkyBlue;\n"
+"}\n"
+"\n"
+"QLineEdit:disabled {\n"
+"    background-color: SkyBlue; \n"
+"}")
 
         self.verticalLayout_60.addWidget(self.txt_veiculo2_cor)
 
@@ -877,6 +1288,16 @@ class Ui_MainWindow(object):
         self.txt_observacoes = QTextEdit(self.frame_48)
         self.txt_observacoes.setObjectName(u"txt_observacoes")
         self.txt_observacoes.setMinimumSize(QSize(0, 50))
+        self.txt_observacoes.setStyleSheet(u" QTextEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:focus {\n"
+"        background-color: SkyBlue; \n"
+"    }\n"
+"    QTextEdit:read-only {\n"
+"        background-color: SkyBlue; \n"
+"    }\n"
+"")
 
         self.verticalLayout_61.addWidget(self.txt_observacoes)
 
@@ -890,11 +1311,11 @@ class Ui_MainWindow(object):
 "  border-radius: 10px;\n"
 "  font-size: 16px;\n"
 "  background-color: rgb(0, 80, 121);\n"
-"  border: 2px solid white;\n"
+"  border: 2px solid white; \n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -920,41 +1341,52 @@ class Ui_MainWindow(object):
         self.tabWidget_7.addTab(self.tab_13, "")
         self.tab_14 = QWidget()
         self.tab_14.setObjectName(u"tab_14")
-        self.verticalLayout_64 = QVBoxLayout(self.tab_14)
-        self.verticalLayout_64.setObjectName(u"verticalLayout_64")
-        self.frame_50 = QFrame(self.tab_14)
-        self.frame_50.setObjectName(u"frame_50")
-        self.frame_50.setFrameShape(QFrame.StyledPanel)
-        self.frame_50.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_63 = QVBoxLayout(self.frame_50)
-        self.verticalLayout_63.setObjectName(u"verticalLayout_63")
-        self.label_96 = QLabel(self.frame_50)
-        self.label_96.setObjectName(u"label_96")
-
-        self.verticalLayout_63.addWidget(self.label_96)
-
-        self.frame_51 = QFrame(self.frame_50)
-        self.frame_51.setObjectName(u"frame_51")
-        self.frame_51.setFrameShape(QFrame.StyledPanel)
-        self.frame_51.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_53 = QVBoxLayout(self.frame_51)
+        self.verticalLayout_53 = QVBoxLayout(self.tab_14)
         self.verticalLayout_53.setObjectName(u"verticalLayout_53")
-        self.frame_52 = QFrame(self.frame_51)
-        self.frame_52.setObjectName(u"frame_52")
-        self.frame_52.setFrameShape(QFrame.StyledPanel)
-        self.frame_52.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_17 = QHBoxLayout(self.frame_52)
+        self.frame_34 = QFrame(self.tab_14)
+        self.frame_34.setObjectName(u"frame_34")
+        self.frame_34.setFrameShape(QFrame.StyledPanel)
+        self.frame_34.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_63 = QVBoxLayout(self.frame_34)
+        self.verticalLayout_63.setObjectName(u"verticalLayout_63")
+        self.label_48 = QLabel(self.frame_34)
+        self.label_48.setObjectName(u"label_48")
+
+        self.verticalLayout_63.addWidget(self.label_48)
+
+        self.frame_41 = QFrame(self.frame_34)
+        self.frame_41.setObjectName(u"frame_41")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.frame_41.sizePolicy().hasHeightForWidth())
+        self.frame_41.setSizePolicy(sizePolicy3)
+        self.frame_41.setFrameShape(QFrame.StyledPanel)
+        self.frame_41.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_17 = QHBoxLayout(self.frame_41)
         self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.txt_pesquisa_nome_completo = QLineEdit(self.frame_52)
-        self.txt_pesquisa_nome_completo.setObjectName(u"txt_pesquisa_nome_completo")
-        self.txt_pesquisa_nome_completo.setMinimumSize(QSize(0, 30))
-        self.txt_pesquisa_nome_completo.setFont(font2)
-        self.txt_pesquisa_nome_completo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.txt_pesquisa_nome_completo.setAlignment(Qt.AlignCenter)
+        self.txt_pesquisa_apartamento_bloco = QLineEdit(self.frame_41)
+        self.txt_pesquisa_apartamento_bloco.setObjectName(u"txt_pesquisa_apartamento_bloco")
+        self.txt_pesquisa_apartamento_bloco.setMinimumSize(QSize(0, 30))
+        self.txt_pesquisa_apartamento_bloco.setFont(font2)
+        self.txt_pesquisa_apartamento_bloco.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisa_apartamento_bloco.setStyleSheet(u"QLineEdit {\n"
+"        background-color: #87CEEB;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: #87CEEB;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: #87CEEB; \n"
+"   }\n"
+"	QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }")
+        self.txt_pesquisa_apartamento_bloco.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_17.addWidget(self.txt_pesquisa_nome_completo)
+        self.horizontalLayout_17.addWidget(self.txt_pesquisa_apartamento_bloco)
 
-        self.btn_pesquisar_morador = QPushButton(self.frame_52)
+        self.btn_pesquisar_morador = QPushButton(self.frame_41)
         self.btn_pesquisar_morador.setObjectName(u"btn_pesquisar_morador")
         self.btn_pesquisar_morador.setMinimumSize(QSize(100, 30))
         self.btn_pesquisar_morador.setFont(font1)
@@ -968,32 +1400,87 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"")
+"}")
 
         self.horizontalLayout_17.addWidget(self.btn_pesquisar_morador)
 
 
-        self.verticalLayout_53.addWidget(self.frame_52)
+        self.verticalLayout_63.addWidget(self.frame_41)
 
-        self.tabela_resultados = QTableView(self.frame_51)
-        self.tabela_resultados.setObjectName(u"tabela_resultados")
+        self.tb_moradores = QTableWidget(self.frame_34)
+        if (self.tb_moradores.columnCount() < 27):
+            self.tb_moradores.setColumnCount(27)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(9, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(10, __qtablewidgetitem10)
+        __qtablewidgetitem11 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(11, __qtablewidgetitem11)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(12, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(13, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(14, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(15, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(16, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(17, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(18, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(19, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(20, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(21, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(22, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(23, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(24, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(25, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.tb_moradores.setHorizontalHeaderItem(26, __qtablewidgetitem26)
+        self.tb_moradores.setObjectName(u"tb_moradores")
+        self.tb_moradores.setStyleSheet(u"QTableWidget{\n"
+"        background-color: #87CEEB;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: #87CEEB;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: #87CEEB; \n"
+"   }")
 
-        self.verticalLayout_53.addWidget(self.tabela_resultados)
+        self.verticalLayout_63.addWidget(self.tb_moradores)
 
 
-        self.verticalLayout_63.addWidget(self.frame_51)
-
-
-        self.verticalLayout_64.addWidget(self.frame_50)
+        self.verticalLayout_53.addWidget(self.frame_34)
 
         self.tabWidget_7.addTab(self.tab_14, "")
 
@@ -1022,7 +1509,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -1036,7 +1523,7 @@ class Ui_MainWindow(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
-        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 695, 679))
+        self.scrollAreaWidgetContents_5.setGeometry(QRect(0, -149, 695, 679))
         self.verticalLayout_54 = QVBoxLayout(self.scrollAreaWidgetContents_5)
         self.verticalLayout_54.setObjectName(u"verticalLayout_54")
         self.frame_30 = QFrame(self.scrollAreaWidgetContents_5)
@@ -1069,6 +1556,19 @@ class Ui_MainWindow(object):
         self.txt_ag_apartamento_bloco.setMinimumSize(QSize(100, 30))
         self.txt_ag_apartamento_bloco.setFont(font2)
         self.txt_ag_apartamento_bloco.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_ag_apartamento_bloco.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"	")
 
         self.verticalLayout_82.addWidget(self.txt_ag_apartamento_bloco, 0, Qt.AlignLeft)
 
@@ -1086,6 +1586,19 @@ class Ui_MainWindow(object):
         self.txt_ag_nome_morador.setMinimumSize(QSize(100, 30))
         self.txt_ag_nome_morador.setFont(font2)
         self.txt_ag_nome_morador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_ag_nome_morador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"	")
 
         self.verticalLayout_83.addWidget(self.txt_ag_nome_morador)
 
@@ -1105,6 +1618,19 @@ class Ui_MainWindow(object):
         self.txt_data_agendamento.setMinimumSize(QSize(0, 30))
         self.txt_data_agendamento.setFont(font2)
         self.txt_data_agendamento.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_agendamento.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"	")
 
         self.verticalLayout_8.addWidget(self.txt_data_agendamento, 0, Qt.AlignLeft)
 
@@ -1126,6 +1652,15 @@ class Ui_MainWindow(object):
         self.cmb_local.setMinimumSize(QSize(0, 30))
         self.cmb_local.setFont(font2)
         self.cmb_local.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.cmb_local.setStyleSheet(u"QComboBox{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
         self.verticalLayout_83.addWidget(self.cmb_local)
 
@@ -1142,6 +1677,15 @@ class Ui_MainWindow(object):
         self.cmb_periodo.setMinimumSize(QSize(0, 30))
         self.cmb_periodo.setFont(font2)
         self.cmb_periodo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.cmb_periodo.setStyleSheet(u"QComboBox{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
         self.verticalLayout_83.addWidget(self.cmb_periodo)
 
@@ -1155,6 +1699,19 @@ class Ui_MainWindow(object):
         self.txt_ag_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_ag_funcionario.setFont(font2)
         self.txt_ag_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_ag_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"	")
 
         self.verticalLayout_83.addWidget(self.txt_ag_funcionario)
 
@@ -1172,6 +1729,15 @@ class Ui_MainWindow(object):
         self.txt_ag_observacoes = QTextEdit(self.frame_42)
         self.txt_ag_observacoes.setObjectName(u"txt_ag_observacoes")
         self.txt_ag_observacoes.setMinimumSize(QSize(0, 50))
+        self.txt_ag_observacoes.setStyleSheet(u"QTextEdit {\n"
+"    background-color: SkyBlue;\n"
+"    }\n"
+"QTextEdit:focus {\n"
+"    background-color: SkyBlue; \n"
+"    }\n"
+"QTextEdit:read-only {\n"
+"    background-color: SkyBlue; \n"
+"    }")
 
         self.verticalLayout_38.addWidget(self.txt_ag_observacoes)
 
@@ -1189,7 +1755,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1246,14 +1812,26 @@ class Ui_MainWindow(object):
         self.frame_40.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_23 = QHBoxLayout(self.frame_40)
         self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
-        self.lineEdit_50 = QLineEdit(self.frame_40)
-        self.lineEdit_50.setObjectName(u"lineEdit_50")
-        self.lineEdit_50.setMinimumSize(QSize(0, 30))
-        self.lineEdit_50.setFont(font2)
-        self.lineEdit_50.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.lineEdit_50.setAlignment(Qt.AlignCenter)
+        self.txt_pesquisar_agendamentos = QLineEdit(self.frame_40)
+        self.txt_pesquisar_agendamentos.setObjectName(u"txt_pesquisar_agendamentos")
+        self.txt_pesquisar_agendamentos.setMinimumSize(QSize(0, 30))
+        self.txt_pesquisar_agendamentos.setFont(font2)
+        self.txt_pesquisar_agendamentos.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisar_agendamentos.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
+        self.txt_pesquisar_agendamentos.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_23.addWidget(self.lineEdit_50)
+        self.horizontalLayout_23.addWidget(self.txt_pesquisar_agendamentos)
 
         self.btn_pesquisar_agendamentos = QPushButton(self.frame_40)
         self.btn_pesquisar_agendamentos.setObjectName(u"btn_pesquisar_agendamentos")
@@ -1269,7 +1847,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1285,10 +1863,37 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_51.addWidget(self.frame_40)
 
-        self.tableView_7 = QTableView(self.frame_39)
-        self.tableView_7.setObjectName(u"tableView_7")
+        self.tb_agendamentos = QTableWidget(self.frame_39)
+        if (self.tb_agendamentos.columnCount() < 8):
+            self.tb_agendamentos.setColumnCount(8)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(0, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(1, __qtablewidgetitem28)
+        __qtablewidgetitem29 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(2, __qtablewidgetitem29)
+        __qtablewidgetitem30 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(3, __qtablewidgetitem30)
+        __qtablewidgetitem31 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(4, __qtablewidgetitem31)
+        __qtablewidgetitem32 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(5, __qtablewidgetitem32)
+        __qtablewidgetitem33 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(6, __qtablewidgetitem33)
+        __qtablewidgetitem34 = QTableWidgetItem()
+        self.tb_agendamentos.setHorizontalHeaderItem(7, __qtablewidgetitem34)
+        self.tb_agendamentos.setObjectName(u"tb_agendamentos")
+        self.tb_agendamentos.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue;\n"
+"   }")
 
-        self.verticalLayout_51.addWidget(self.tableView_7)
+        self.verticalLayout_51.addWidget(self.tb_agendamentos)
 
 
         self.horizontalLayout_22.addWidget(self.frame_39)
@@ -1326,7 +1931,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -1364,6 +1969,18 @@ class Ui_MainWindow(object):
         self.txt_data_visita.setMinimumSize(QSize(0, 30))
         self.txt_data_visita.setFont(font2)
         self.txt_data_visita.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_visita.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_46.addWidget(self.txt_data_visita)
 
@@ -1377,6 +1994,18 @@ class Ui_MainWindow(object):
         self.txt_nome_visitante.setMinimumSize(QSize(0, 30))
         self.txt_nome_visitante.setFont(font2)
         self.txt_nome_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_46.addWidget(self.txt_nome_visitante)
 
@@ -1390,6 +2019,18 @@ class Ui_MainWindow(object):
         self.txt_rg_cpf_visitante.setMinimumSize(QSize(0, 30))
         self.txt_rg_cpf_visitante.setFont(font2)
         self.txt_rg_cpf_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_rg_cpf_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_46.addWidget(self.txt_rg_cpf_visitante)
 
@@ -1403,6 +2044,18 @@ class Ui_MainWindow(object):
         self.txt_visitando.setMinimumSize(QSize(0, 30))
         self.txt_visitando.setFont(font2)
         self.txt_visitando.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_visitando.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_46.addWidget(self.txt_visitando)
 
@@ -1425,6 +2078,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_bloco_visitantes.setMinimumSize(QSize(100, 30))
         self.txt_apartamento_bloco_visitantes.setFont(font2)
         self.txt_apartamento_bloco_visitantes.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_bloco_visitantes.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_84.addWidget(self.txt_apartamento_bloco_visitantes, 0, Qt.AlignLeft)
 
@@ -1448,6 +2113,18 @@ class Ui_MainWindow(object):
         self.txt_hora_entrada_visita.setMinimumSize(QSize(0, 30))
         self.txt_hora_entrada_visita.setFont(font2)
         self.txt_hora_entrada_visita.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_hora_entrada_visita.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_21.addWidget(self.txt_hora_entrada_visita)
 
@@ -1462,6 +2139,18 @@ class Ui_MainWindow(object):
         self.txt_hora_saida_visita.setMinimumSize(QSize(0, 30))
         self.txt_hora_saida_visita.setFont(font2)
         self.txt_hora_saida_visita.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_hora_saida_visita.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_21.addWidget(self.txt_hora_saida_visita)
 
@@ -1484,6 +2173,18 @@ class Ui_MainWindow(object):
         self.txt_quem_autorizou_visita.setMinimumSize(QSize(0, 30))
         self.txt_quem_autorizou_visita.setFont(font2)
         self.txt_quem_autorizou_visita.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_quem_autorizou_visita.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.txt_quem_autorizou_visita)
 
@@ -1499,6 +2200,15 @@ class Ui_MainWindow(object):
         self.cmb_vaga_utilizada.setMinimumSize(QSize(0, 30))
         self.cmb_vaga_utilizada.setFont(font2)
         self.cmb_vaga_utilizada.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.cmb_vaga_utilizada.setStyleSheet(u"QComboBox{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color:SkyBlue;\n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.cmb_vaga_utilizada)
 
@@ -1512,6 +2222,18 @@ class Ui_MainWindow(object):
         self.txt_placa_visitante.setMinimumSize(QSize(0, 30))
         self.txt_placa_visitante.setFont(font2)
         self.txt_placa_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_placa_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.txt_placa_visitante)
 
@@ -1525,6 +2247,18 @@ class Ui_MainWindow(object):
         self.txt_marca_visitante.setMinimumSize(QSize(0, 30))
         self.txt_marca_visitante.setFont(font2)
         self.txt_marca_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_marca_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.txt_marca_visitante)
 
@@ -1538,6 +2272,18 @@ class Ui_MainWindow(object):
         self.txt_modelo_visitante.setMinimumSize(QSize(0, 30))
         self.txt_modelo_visitante.setFont(font2)
         self.txt_modelo_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_modelo_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.txt_modelo_visitante)
 
@@ -1551,6 +2297,18 @@ class Ui_MainWindow(object):
         self.txt_cor_visitante.setMinimumSize(QSize(0, 30))
         self.txt_cor_visitante.setFont(font2)
         self.txt_cor_visitante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_cor_visitante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_45.addWidget(self.txt_cor_visitante)
 
@@ -1568,7 +2326,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1624,6 +2382,18 @@ class Ui_MainWindow(object):
         self.txt_pesquisa_visitantes.setMinimumSize(QSize(0, 30))
         self.txt_pesquisa_visitantes.setFont(font2)
         self.txt_pesquisa_visitantes.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisa_visitantes.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.txt_pesquisa_visitantes.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_19.addWidget(self.txt_pesquisa_visitantes)
@@ -1642,7 +2412,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1658,10 +2428,49 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_43.addWidget(self.frame_32)
 
-        self.tableView_6 = QTableView(self.frame_31)
-        self.tableView_6.setObjectName(u"tableView_6")
+        self.tb_visitantes = QTableWidget(self.frame_31)
+        if (self.tb_visitantes.columnCount() < 14):
+            self.tb_visitantes.setColumnCount(14)
+        __qtablewidgetitem35 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(0, __qtablewidgetitem35)
+        __qtablewidgetitem36 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(1, __qtablewidgetitem36)
+        __qtablewidgetitem37 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(2, __qtablewidgetitem37)
+        __qtablewidgetitem38 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(3, __qtablewidgetitem38)
+        __qtablewidgetitem39 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(4, __qtablewidgetitem39)
+        __qtablewidgetitem40 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(5, __qtablewidgetitem40)
+        __qtablewidgetitem41 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(6, __qtablewidgetitem41)
+        __qtablewidgetitem42 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(7, __qtablewidgetitem42)
+        __qtablewidgetitem43 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(8, __qtablewidgetitem43)
+        __qtablewidgetitem44 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(9, __qtablewidgetitem44)
+        __qtablewidgetitem45 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(10, __qtablewidgetitem45)
+        __qtablewidgetitem46 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(11, __qtablewidgetitem46)
+        __qtablewidgetitem47 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(12, __qtablewidgetitem47)
+        __qtablewidgetitem48 = QTableWidgetItem()
+        self.tb_visitantes.setHorizontalHeaderItem(13, __qtablewidgetitem48)
+        self.tb_visitantes.setObjectName(u"tb_visitantes")
+        self.tb_visitantes.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
-        self.verticalLayout_43.addWidget(self.tableView_6)
+        self.verticalLayout_43.addWidget(self.tb_visitantes)
 
 
         self.horizontalLayout_18.addWidget(self.frame_31)
@@ -1696,7 +2505,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: #87CEEB;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -1734,6 +2543,18 @@ class Ui_MainWindow(object):
         self.txt_nome_empresa.setMinimumSize(QSize(0, 30))
         self.txt_nome_empresa.setFont(font2)
         self.txt_nome_empresa.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_empresa.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_nome_empresa)
 
@@ -1747,6 +2568,18 @@ class Ui_MainWindow(object):
         self.txt_tipo_servico.setMinimumSize(QSize(0, 30))
         self.txt_tipo_servico.setFont(font2)
         self.txt_tipo_servico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_tipo_servico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_tipo_servico)
 
@@ -1760,6 +2593,18 @@ class Ui_MainWindow(object):
         self.txt_data_servico.setMinimumSize(QSize(0, 30))
         self.txt_data_servico.setFont(font2)
         self.txt_data_servico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_servico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_data_servico)
 
@@ -1773,6 +2618,18 @@ class Ui_MainWindow(object):
         self.txt_hora_entrada_prestador.setMinimumSize(QSize(0, 30))
         self.txt_hora_entrada_prestador.setFont(font2)
         self.txt_hora_entrada_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_hora_entrada_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_hora_entrada_prestador)
 
@@ -1786,6 +2643,18 @@ class Ui_MainWindow(object):
         self.txt_hora_saida_prestador.setMinimumSize(QSize(0, 30))
         self.txt_hora_saida_prestador.setFont(font2)
         self.txt_hora_saida_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_hora_saida_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_hora_saida_prestador)
 
@@ -1799,6 +2668,18 @@ class Ui_MainWindow(object):
         self.txt_nome_prestador.setMinimumSize(QSize(0, 30))
         self.txt_nome_prestador.setFont(font2)
         self.txt_nome_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_nome_prestador)
 
@@ -1812,6 +2693,18 @@ class Ui_MainWindow(object):
         self.txt_rg_cpf_prestador.setMinimumSize(QSize(0, 30))
         self.txt_rg_cpf_prestador.setFont(font2)
         self.txt_rg_cpf_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_rg_cpf_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_rg_cpf_prestador)
 
@@ -1825,6 +2718,18 @@ class Ui_MainWindow(object):
         self.txt_telefone_prestador.setMinimumSize(QSize(0, 30))
         self.txt_telefone_prestador.setFont(font2)
         self.txt_telefone_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_telefone_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_telefone_prestador)
 
@@ -1838,6 +2743,18 @@ class Ui_MainWindow(object):
         self.txt_contratante.setMinimumSize(QSize(0, 30))
         self.txt_contratante.setFont(font2)
         self.txt_contratante.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_contratante.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_contratante)
 
@@ -1860,6 +2777,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_bloco_prestador.setMinimumSize(QSize(100, 30))
         self.txt_apartamento_bloco_prestador.setFont(font2)
         self.txt_apartamento_bloco_prestador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_bloco_prestador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_85.addWidget(self.txt_apartamento_bloco_prestador, 0, Qt.AlignLeft)
 
@@ -1876,6 +2805,18 @@ class Ui_MainWindow(object):
         self.txt_autorizou_entrada.setMinimumSize(QSize(0, 30))
         self.txt_autorizou_entrada.setFont(font2)
         self.txt_autorizou_entrada.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_autorizou_entrada.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_39.addWidget(self.txt_autorizou_entrada)
 
@@ -1893,7 +2834,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1946,6 +2887,18 @@ class Ui_MainWindow(object):
         self.lineEdit_22.setMinimumSize(QSize(0, 30))
         self.lineEdit_22.setFont(font2)
         self.lineEdit_22.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.lineEdit_22.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.lineEdit_22.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_15.addWidget(self.lineEdit_22)
@@ -1964,7 +2917,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -1980,10 +2933,45 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_36.addWidget(self.frame_27)
 
-        self.tableView_4 = QTableView(self.frame_26)
-        self.tableView_4.setObjectName(u"tableView_4")
+        self.tb_prestadores = QTableWidget(self.frame_26)
+        if (self.tb_prestadores.columnCount() < 12):
+            self.tb_prestadores.setColumnCount(12)
+        __qtablewidgetitem49 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(0, __qtablewidgetitem49)
+        __qtablewidgetitem50 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(1, __qtablewidgetitem50)
+        __qtablewidgetitem51 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(2, __qtablewidgetitem51)
+        __qtablewidgetitem52 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(3, __qtablewidgetitem52)
+        __qtablewidgetitem53 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(4, __qtablewidgetitem53)
+        __qtablewidgetitem54 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(5, __qtablewidgetitem54)
+        __qtablewidgetitem55 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(6, __qtablewidgetitem55)
+        __qtablewidgetitem56 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(7, __qtablewidgetitem56)
+        __qtablewidgetitem57 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(8, __qtablewidgetitem57)
+        __qtablewidgetitem58 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(9, __qtablewidgetitem58)
+        __qtablewidgetitem59 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(10, __qtablewidgetitem59)
+        __qtablewidgetitem60 = QTableWidgetItem()
+        self.tb_prestadores.setHorizontalHeaderItem(11, __qtablewidgetitem60)
+        self.tb_prestadores.setObjectName(u"tb_prestadores")
+        self.tb_prestadores.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue;\n"
+"   }")
 
-        self.verticalLayout_36.addWidget(self.tableView_4)
+        self.verticalLayout_36.addWidget(self.tb_prestadores)
 
 
         self.horizontalLayout_16.addWidget(self.frame_26)
@@ -2018,7 +3006,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -2056,6 +3044,18 @@ class Ui_MainWindow(object):
         self.txt_numero_protocolo.setMinimumSize(QSize(0, 30))
         self.txt_numero_protocolo.setFont(font2)
         self.txt_numero_protocolo.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_numero_protocolo.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_numero_protocolo)
 
@@ -2069,6 +3069,18 @@ class Ui_MainWindow(object):
         self.txt_data_hora_recebimento.setMinimumSize(QSize(0, 30))
         self.txt_data_hora_recebimento.setFont(font2)
         self.txt_data_hora_recebimento.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_hora_recebimento.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_data_hora_recebimento)
 
@@ -2082,6 +3094,18 @@ class Ui_MainWindow(object):
         self.txt_nome_destinatario.setMinimumSize(QSize(0, 30))
         self.txt_nome_destinatario.setFont(font2)
         self.txt_nome_destinatario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_destinatario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_nome_destinatario)
 
@@ -2104,6 +3128,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_bloco_encomendas.setMinimumSize(QSize(100, 30))
         self.txt_apartamento_bloco_encomendas.setFont(font2)
         self.txt_apartamento_bloco_encomendas.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_bloco_encomendas.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_86.addWidget(self.txt_apartamento_bloco_encomendas, 0, Qt.AlignLeft)
 
@@ -2120,6 +3156,18 @@ class Ui_MainWindow(object):
         self.txt_numero_rastreamento.setMinimumSize(QSize(0, 30))
         self.txt_numero_rastreamento.setFont(font2)
         self.txt_numero_rastreamento.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_numero_rastreamento.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_numero_rastreamento)
 
@@ -2136,6 +3184,15 @@ class Ui_MainWindow(object):
         self.cmb_tipo_encomenda.setMinimumSize(QSize(0, 30))
         self.cmb_tipo_encomenda.setFont(font2)
         self.cmb_tipo_encomenda.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.cmb_tipo_encomenda.setStyleSheet(u"QComboBox{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.cmb_tipo_encomenda)
 
@@ -2153,6 +3210,15 @@ class Ui_MainWindow(object):
         self.txt_descricao_encomenda = QTextEdit(self.frame_63)
         self.txt_descricao_encomenda.setObjectName(u"txt_descricao_encomenda")
         self.txt_descricao_encomenda.setMinimumSize(QSize(0, 50))
+        self.txt_descricao_encomenda.setStyleSheet(u" QTextEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:read-only {\n"
+"        background-color: SkyBlue; \n"
+"    }")
 
         self.verticalLayout_78.addWidget(self.txt_descricao_encomenda)
 
@@ -2169,6 +3235,18 @@ class Ui_MainWindow(object):
         self.txt_empresa_entrega.setMinimumSize(QSize(0, 30))
         self.txt_empresa_entrega.setFont(font2)
         self.txt_empresa_entrega.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_empresa_entrega.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_empresa_entrega)
 
@@ -2186,6 +3264,15 @@ class Ui_MainWindow(object):
         self.txt_observacoes_encomendas = QTextEdit(self.frame_64)
         self.txt_observacoes_encomendas.setObjectName(u"txt_observacoes_encomendas")
         self.txt_observacoes_encomendas.setMinimumSize(QSize(0, 50))
+        self.txt_observacoes_encomendas.setStyleSheet(u" QTextEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:read-only {\n"
+"        background-color: SkyBlue; \n"
+"    }")
 
         self.verticalLayout_79.addWidget(self.txt_observacoes_encomendas)
 
@@ -2202,6 +3289,18 @@ class Ui_MainWindow(object):
         self.txt_nome_entregador.setMinimumSize(QSize(0, 30))
         self.txt_nome_entregador.setFont(font2)
         self.txt_nome_entregador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_entregador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_nome_entregador)
 
@@ -2210,6 +3309,18 @@ class Ui_MainWindow(object):
         self.txt_rg_cpf_entregador.setMinimumSize(QSize(0, 30))
         self.txt_rg_cpf_entregador.setFont(font2)
         self.txt_rg_cpf_entregador.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_rg_cpf_entregador.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_rg_cpf_entregador)
 
@@ -2223,6 +3334,18 @@ class Ui_MainWindow(object):
         self.txt_nome_porteiro.setMinimumSize(QSize(0, 30))
         self.txt_nome_porteiro.setFont(font2)
         self.txt_nome_porteiro.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_porteiro.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_nome_porteiro)
 
@@ -2236,6 +3359,18 @@ class Ui_MainWindow(object):
         self.txt_nome_retirou.setMinimumSize(QSize(0, 30))
         self.txt_nome_retirou.setFont(font2)
         self.txt_nome_retirou.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_retirou.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_80.addWidget(self.txt_nome_retirou)
 
@@ -2253,7 +3388,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2306,6 +3441,18 @@ class Ui_MainWindow(object):
         self.txt_pesquisar_encomendas.setMinimumSize(QSize(0, 30))
         self.txt_pesquisar_encomendas.setFont(font2)
         self.txt_pesquisar_encomendas.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisar_encomendas.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.txt_pesquisar_encomendas.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_30.addWidget(self.txt_pesquisar_encomendas)
@@ -2324,7 +3471,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2340,10 +3487,49 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_75.addWidget(self.frame_60)
 
-        self.tableView_9 = QTableView(self.frame_59)
-        self.tableView_9.setObjectName(u"tableView_9")
+        self.tb_encomendas = QTableWidget(self.frame_59)
+        if (self.tb_encomendas.columnCount() < 14):
+            self.tb_encomendas.setColumnCount(14)
+        __qtablewidgetitem61 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(0, __qtablewidgetitem61)
+        __qtablewidgetitem62 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(1, __qtablewidgetitem62)
+        __qtablewidgetitem63 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(2, __qtablewidgetitem63)
+        __qtablewidgetitem64 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(3, __qtablewidgetitem64)
+        __qtablewidgetitem65 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(4, __qtablewidgetitem65)
+        __qtablewidgetitem66 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(5, __qtablewidgetitem66)
+        __qtablewidgetitem67 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(6, __qtablewidgetitem67)
+        __qtablewidgetitem68 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(7, __qtablewidgetitem68)
+        __qtablewidgetitem69 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(8, __qtablewidgetitem69)
+        __qtablewidgetitem70 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(9, __qtablewidgetitem70)
+        __qtablewidgetitem71 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(10, __qtablewidgetitem71)
+        __qtablewidgetitem72 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(11, __qtablewidgetitem72)
+        __qtablewidgetitem73 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(12, __qtablewidgetitem73)
+        __qtablewidgetitem74 = QTableWidgetItem()
+        self.tb_encomendas.setHorizontalHeaderItem(13, __qtablewidgetitem74)
+        self.tb_encomendas.setObjectName(u"tb_encomendas")
+        self.tb_encomendas.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue;\n"
+"   }")
 
-        self.verticalLayout_75.addWidget(self.tableView_9)
+        self.verticalLayout_75.addWidget(self.tb_encomendas)
 
 
         self.horizontalLayout_29.addWidget(self.frame_59)
@@ -2378,7 +3564,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -2417,6 +3603,18 @@ class Ui_MainWindow(object):
         self.txt_numero_protocolo_ocorrencias.setMinimumSize(QSize(0, 30))
         self.txt_numero_protocolo_ocorrencias.setFont(font2)
         self.txt_numero_protocolo_ocorrencias.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_numero_protocolo_ocorrencias.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_70.addWidget(self.txt_numero_protocolo_ocorrencias)
 
@@ -2430,6 +3628,18 @@ class Ui_MainWindow(object):
         self.txt_data_ocorrencia.setMinimumSize(QSize(0, 30))
         self.txt_data_ocorrencia.setFont(font2)
         self.txt_data_ocorrencia.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_ocorrencia.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_70.addWidget(self.txt_data_ocorrencia)
 
@@ -2443,6 +3653,18 @@ class Ui_MainWindow(object):
         self.txt_nome_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_nome_funcionario.setFont(font2)
         self.txt_nome_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_70.addWidget(self.txt_nome_funcionario)
 
@@ -2456,6 +3678,18 @@ class Ui_MainWindow(object):
         self.txt_hora_registro.setMinimumSize(QSize(0, 30))
         self.txt_hora_registro.setFont(font2)
         self.txt_hora_registro.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_hora_registro.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_70.addWidget(self.txt_hora_registro)
 
@@ -2469,6 +3703,18 @@ class Ui_MainWindow(object):
         self.txt_data_registro.setMinimumSize(QSize(0, 30))
         self.txt_data_registro.setFont(font2)
         self.txt_data_registro.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_registro.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_70.addWidget(self.txt_data_registro)
 
@@ -2486,6 +3732,16 @@ class Ui_MainWindow(object):
         self.txt_descricao = QTextEdit(self.frame_54)
         self.txt_descricao.setObjectName(u"txt_descricao")
         self.txt_descricao.setMinimumSize(QSize(0, 50))
+        self.txt_descricao.setStyleSheet(u"QTextEdit {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:read-only {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"")
 
         self.verticalLayout_69.addWidget(self.txt_descricao)
 
@@ -2509,7 +3765,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2559,6 +3815,18 @@ class Ui_MainWindow(object):
         self.txt_pesquisa_ocorrencia.setMinimumSize(QSize(0, 30))
         self.txt_pesquisa_ocorrencia.setFont(font2)
         self.txt_pesquisa_ocorrencia.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisa_ocorrencia.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.txt_pesquisa_ocorrencia.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_28.addWidget(self.txt_pesquisa_ocorrencia)
@@ -2577,7 +3845,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2593,10 +3861,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_71.addWidget(self.frame_57)
 
-        self.tableView_5 = QTableView(self.frame_56)
-        self.tableView_5.setObjectName(u"tableView_5")
+        self.tb_ocorrencias = QTableWidget(self.frame_56)
+        if (self.tb_ocorrencias.columnCount() < 7):
+            self.tb_ocorrencias.setColumnCount(7)
+        __qtablewidgetitem75 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(0, __qtablewidgetitem75)
+        __qtablewidgetitem76 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(1, __qtablewidgetitem76)
+        __qtablewidgetitem77 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(2, __qtablewidgetitem77)
+        __qtablewidgetitem78 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(3, __qtablewidgetitem78)
+        __qtablewidgetitem79 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(4, __qtablewidgetitem79)
+        __qtablewidgetitem80 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(5, __qtablewidgetitem80)
+        __qtablewidgetitem81 = QTableWidgetItem()
+        self.tb_ocorrencias.setHorizontalHeaderItem(6, __qtablewidgetitem81)
+        self.tb_ocorrencias.setObjectName(u"tb_ocorrencias")
+        self.tb_ocorrencias.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue;\n"
+"   }")
 
-        self.verticalLayout_71.addWidget(self.tableView_5)
+        self.verticalLayout_71.addWidget(self.tb_ocorrencias)
 
 
         self.verticalLayout_72.addWidget(self.frame_56)
@@ -2631,7 +3924,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -2662,6 +3955,18 @@ class Ui_MainWindow(object):
         self.txt_nome_funcionarios.setMinimumSize(QSize(0, 30))
         self.txt_nome_funcionarios.setFont(font2)
         self.txt_nome_funcionarios.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_funcionarios.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_29.addWidget(self.txt_nome_funcionarios)
 
@@ -2675,6 +3980,18 @@ class Ui_MainWindow(object):
         self.txt_endereco_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_endereco_funcionario.setFont(font2)
         self.txt_endereco_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_endereco_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_29.addWidget(self.txt_endereco_funcionario)
 
@@ -2695,6 +4012,18 @@ class Ui_MainWindow(object):
         self.txt_bairro_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_bairro_funcionario.setFont(font2)
         self.txt_bairro_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_bairro_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_12.addWidget(self.txt_bairro_funcionario)
 
@@ -2709,6 +4038,18 @@ class Ui_MainWindow(object):
         self.txt_cep_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_cep_funcionario.setFont(font2)
         self.txt_cep_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_cep_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_12.addWidget(self.txt_cep_funcionario)
 
@@ -2732,6 +4073,18 @@ class Ui_MainWindow(object):
         self.txt_telefone_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_telefone_funcionario.setFont(font2)
         self.txt_telefone_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_telefone_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_13.addWidget(self.txt_telefone_funcionario)
 
@@ -2746,6 +4099,18 @@ class Ui_MainWindow(object):
         self.txt_celular_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_celular_funcionario.setFont(font2)
         self.txt_celular_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_celular_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.horizontalLayout_13.addWidget(self.txt_celular_funcionario)
 
@@ -2762,6 +4127,18 @@ class Ui_MainWindow(object):
         self.txt_email_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_email_funcionario.setFont(font2)
         self.txt_email_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_email_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_29.addWidget(self.txt_email_funcionario)
 
@@ -2779,6 +4156,16 @@ class Ui_MainWindow(object):
         self.txt_observacao_funcionario = QTextEdit(self.frame_19)
         self.txt_observacao_funcionario.setObjectName(u"txt_observacao_funcionario")
         self.txt_observacao_funcionario.setMinimumSize(QSize(0, 50))
+        self.txt_observacao_funcionario.setStyleSheet(u"QTextEdit {\n"
+"        background-color: SkyBlue\n"
+"    }\n"
+"    QTextEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QTextEdit:read-only {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"")
 
         self.verticalLayout_30.addWidget(self.txt_observacao_funcionario)
 
@@ -2802,7 +4189,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2842,6 +4229,18 @@ class Ui_MainWindow(object):
         self.txt_pesquisar_funcionario.setMinimumSize(QSize(0, 30))
         self.txt_pesquisar_funcionario.setFont(font2)
         self.txt_pesquisar_funcionario.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisar_funcionario.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.txt_pesquisar_funcionario.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_14.addWidget(self.txt_pesquisar_funcionario)
@@ -2860,7 +4259,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -2876,10 +4275,39 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_32.addWidget(self.frame_24)
 
-        self.tableView_3 = QTableView(self.frame_23)
-        self.tableView_3.setObjectName(u"tableView_3")
+        self.tb_funcionarios = QTableWidget(self.frame_23)
+        if (self.tb_funcionarios.columnCount() < 9):
+            self.tb_funcionarios.setColumnCount(9)
+        __qtablewidgetitem82 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(0, __qtablewidgetitem82)
+        __qtablewidgetitem83 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(1, __qtablewidgetitem83)
+        __qtablewidgetitem84 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(2, __qtablewidgetitem84)
+        __qtablewidgetitem85 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(3, __qtablewidgetitem85)
+        __qtablewidgetitem86 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(4, __qtablewidgetitem86)
+        __qtablewidgetitem87 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(5, __qtablewidgetitem87)
+        __qtablewidgetitem88 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(6, __qtablewidgetitem88)
+        __qtablewidgetitem89 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(7, __qtablewidgetitem89)
+        __qtablewidgetitem90 = QTableWidgetItem()
+        self.tb_funcionarios.setHorizontalHeaderItem(8, __qtablewidgetitem90)
+        self.tb_funcionarios.setObjectName(u"tb_funcionarios")
+        self.tb_funcionarios.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: lSkyBlue; \n"
+"   }")
 
-        self.verticalLayout_32.addWidget(self.tableView_3)
+        self.verticalLayout_32.addWidget(self.tb_funcionarios)
 
 
         self.verticalLayout_33.addWidget(self.frame_23)
@@ -2912,7 +4340,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -2944,6 +4372,18 @@ class Ui_MainWindow(object):
         self.txt_nome_domestico.setMinimumSize(QSize(0, 30))
         self.txt_nome_domestico.setFont(font2)
         self.txt_nome_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_nome_domestico)
 
@@ -2957,6 +4397,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_domestico.setMinimumSize(QSize(0, 30))
         self.txt_apartamento_domestico.setFont(font2)
         self.txt_apartamento_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_apartamento_domestico)
 
@@ -2970,6 +4422,18 @@ class Ui_MainWindow(object):
         self.txt_bloco_domestico.setMinimumSize(QSize(0, 30))
         self.txt_bloco_domestico.setFont(font2)
         self.txt_bloco_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_bloco_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_bloco_domestico)
 
@@ -2983,6 +4447,18 @@ class Ui_MainWindow(object):
         self.txt_funcao_domestico.setMinimumSize(QSize(0, 30))
         self.txt_funcao_domestico.setFont(font2)
         self.txt_funcao_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_funcao_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_funcao_domestico)
 
@@ -2996,6 +4472,18 @@ class Ui_MainWindow(object):
         self.txt_horario_domestico.setMinimumSize(QSize(0, 30))
         self.txt_horario_domestico.setFont(font2)
         self.txt_horario_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_horario_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_horario_domestico)
 
@@ -3009,6 +4497,18 @@ class Ui_MainWindow(object):
         self.txt_telefone_domestico.setMinimumSize(QSize(0, 30))
         self.txt_telefone_domestico.setFont(font2)
         self.txt_telefone_domestico.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_telefone_domestico.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_24.addWidget(self.txt_telefone_domestico)
 
@@ -3029,7 +4529,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -3069,6 +4569,18 @@ class Ui_MainWindow(object):
         self.txt_pesquisar_domesticos.setMinimumSize(QSize(0, 30))
         self.txt_pesquisar_domesticos.setFont(font2)
         self.txt_pesquisar_domesticos.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_pesquisar_domesticos.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
         self.txt_pesquisar_domesticos.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_11.addWidget(self.txt_pesquisar_domesticos)
@@ -3087,7 +4599,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -3103,10 +4615,35 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_27.addWidget(self.frame_18)
 
-        self.tableView_2 = QTableView(self.frame_17)
-        self.tableView_2.setObjectName(u"tableView_2")
+        self.tableWidget = QTableWidget(self.frame_17)
+        if (self.tableWidget.columnCount() < 7):
+            self.tableWidget.setColumnCount(7)
+        __qtablewidgetitem91 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem91)
+        __qtablewidgetitem92 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem92)
+        __qtablewidgetitem93 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem93)
+        __qtablewidgetitem94 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem94)
+        __qtablewidgetitem95 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem95)
+        __qtablewidgetitem96 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem96)
+        __qtablewidgetitem97 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem97)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
-        self.verticalLayout_27.addWidget(self.tableView_2)
+        self.verticalLayout_27.addWidget(self.tableWidget)
 
 
         self.verticalLayout_26.addWidget(self.frame_17)
@@ -3138,7 +4675,7 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QTabBar::tab:selected { \n"
-"	background-color: white; /* Definindo a cor de fundo como branco */\n"
+"	background-color: SkyBlue;\n"
 "  margin-bottom: -1px; \n"
 " color: rgb(0, 85, 127);\n"
 "	\n"
@@ -3162,16 +4699,16 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 695, 575))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, -80, 695, 575))
         self.verticalLayout_20 = QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
         self.frame_11 = QFrame(self.scrollAreaWidgetContents_2)
         self.frame_11.setObjectName(u"frame_11")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
-        self.frame_11.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
+        self.frame_11.setSizePolicy(sizePolicy4)
         self.frame_11.setFrameShape(QFrame.StyledPanel)
         self.frame_11.setFrameShadow(QFrame.Raised)
         self.verticalLayout_16 = QVBoxLayout(self.frame_11)
@@ -3186,6 +4723,19 @@ class Ui_MainWindow(object):
         self.txt_data_mudanca.setMinimumSize(QSize(0, 30))
         self.txt_data_mudanca.setFont(font2)
         self.txt_data_mudanca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_mudanca.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"")
 
         self.verticalLayout_16.addWidget(self.txt_data_mudanca)
 
@@ -3194,8 +4744,8 @@ class Ui_MainWindow(object):
 
         self.frame_13 = QFrame(self.scrollAreaWidgetContents_2)
         self.frame_13.setObjectName(u"frame_13")
-        sizePolicy3.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
-        self.frame_13.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
+        self.frame_13.setSizePolicy(sizePolicy4)
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.verticalLayout_18 = QVBoxLayout(self.frame_13)
@@ -3210,6 +4760,18 @@ class Ui_MainWindow(object):
         self.txt_horario_mudanca.setMinimumSize(QSize(0, 30))
         self.txt_horario_mudanca.setFont(font2)
         self.txt_horario_mudanca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_horario_mudanca.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_18.addWidget(self.txt_horario_mudanca)
 
@@ -3218,8 +4780,8 @@ class Ui_MainWindow(object):
 
         self.frame_12 = QFrame(self.scrollAreaWidgetContents_2)
         self.frame_12.setObjectName(u"frame_12")
-        sizePolicy3.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
-        self.frame_12.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy4)
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
         self.verticalLayout_17 = QVBoxLayout(self.frame_12)
@@ -3234,6 +4796,18 @@ class Ui_MainWindow(object):
         self.txt_nome_responsavel.setMinimumSize(QSize(0, 30))
         self.txt_nome_responsavel.setFont(font2)
         self.txt_nome_responsavel.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_responsavel.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_17.addWidget(self.txt_nome_responsavel)
 
@@ -3242,6 +4816,18 @@ class Ui_MainWindow(object):
         self.txt_apartamento_mudanca.setMinimumSize(QSize(0, 30))
         self.txt_apartamento_mudanca.setFont(font2)
         self.txt_apartamento_mudanca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_apartamento_mudanca.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
 
         self.verticalLayout_17.addWidget(self.txt_apartamento_mudanca)
 
@@ -3250,6 +4836,19 @@ class Ui_MainWindow(object):
         self.txt_bloco_mudanca.setMinimumSize(QSize(0, 30))
         self.txt_bloco_mudanca.setFont(font2)
         self.txt_bloco_mudanca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_bloco_mudanca.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"")
 
         self.verticalLayout_17.addWidget(self.txt_bloco_mudanca)
 
@@ -3258,8 +4857,8 @@ class Ui_MainWindow(object):
 
         self.frame_14 = QFrame(self.scrollAreaWidgetContents_2)
         self.frame_14.setObjectName(u"frame_14")
-        sizePolicy3.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
-        self.frame_14.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.frame_14.sizePolicy().hasHeightForWidth())
+        self.frame_14.setSizePolicy(sizePolicy4)
         self.frame_14.setFrameShape(QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QFrame.Raised)
         self.verticalLayout_19 = QVBoxLayout(self.frame_14)
@@ -3274,6 +4873,19 @@ class Ui_MainWindow(object):
         self.txt_nome_enp_mudanca.setMinimumSize(QSize(0, 30))
         self.txt_nome_enp_mudanca.setFont(font2)
         self.txt_nome_enp_mudanca.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_nome_enp_mudanca.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }\n"
+"")
 
         self.verticalLayout_19.addWidget(self.txt_nome_enp_mudanca)
 
@@ -3312,7 +4924,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #87CEEB;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -3346,22 +4958,62 @@ class Ui_MainWindow(object):
         self.frame_15.setFrameShadow(QFrame.Raised)
         self.verticalLayout_22 = QVBoxLayout(self.frame_15)
         self.verticalLayout_22.setObjectName(u"verticalLayout_22")
-        self.dateEdit = QDateEdit(self.frame_15)
-        self.dateEdit.setObjectName(u"dateEdit")
-        self.dateEdit.setMinimumSize(QSize(180, 30))
-        self.dateEdit.setFont(font2)
-        self.dateEdit.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.dateEdit.setStyleSheet(u"QComboBox QAbstractItemView {\n"
-"    color:  white;\n"
-"}\n"
-"")
+        self.txt_data_mudanca_2 = QLineEdit(self.frame_15)
+        self.txt_data_mudanca_2.setObjectName(u"txt_data_mudanca_2")
+        self.txt_data_mudanca_2.setMinimumSize(QSize(0, 30))
+        self.txt_data_mudanca_2.setFont(font2)
+        self.txt_data_mudanca_2.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.txt_data_mudanca_2.setStyleSheet(u"QLineEdit {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit::placeholder {\n"
+"     color: Black;\n"
+"    }\n"
+"QLineEdit:focus {\n"
+"      background-color: SkyBlue;\n"
+"    }\n"
+"QLineEdit:disabled {\n"
+"      background-color:SkyBlue; \n"
+"   }")
+        self.txt_data_mudanca_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_22.addWidget(self.dateEdit)
+        self.verticalLayout_22.addWidget(self.txt_data_mudanca_2)
 
-        self.tableView = QTableView(self.frame_15)
-        self.tableView.setObjectName(u"tableView")
+        self.tableWidget_2 = QTableWidget(self.frame_15)
+        if (self.tableWidget_2.columnCount() < 10):
+            self.tableWidget_2.setColumnCount(10)
+        __qtablewidgetitem98 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem98)
+        __qtablewidgetitem99 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem99)
+        __qtablewidgetitem100 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(2, __qtablewidgetitem100)
+        __qtablewidgetitem101 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(3, __qtablewidgetitem101)
+        __qtablewidgetitem102 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(4, __qtablewidgetitem102)
+        __qtablewidgetitem103 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(5, __qtablewidgetitem103)
+        __qtablewidgetitem104 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(6, __qtablewidgetitem104)
+        __qtablewidgetitem105 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(7, __qtablewidgetitem105)
+        __qtablewidgetitem106 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(8, __qtablewidgetitem106)
+        __qtablewidgetitem107 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(9, __qtablewidgetitem107)
+        self.tableWidget_2.setObjectName(u"tableWidget_2")
+        self.tableWidget_2.setStyleSheet(u"QTableWidget{\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:focus {\n"
+"        background-color: SkyBlue;\n"
+"    }\n"
+"    QLineEdit:disabled {\n"
+"        background-color: SkyBlue; \n"
+"   }")
 
-        self.verticalLayout_22.addWidget(self.tableView)
+        self.verticalLayout_22.addWidget(self.tableWidget_2)
 
         self.btn_pesquisar_mudancas = QPushButton(self.frame_15)
         self.btn_pesquisar_mudancas.setObjectName(u"btn_pesquisar_mudancas")
@@ -3377,7 +5029,7 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"  background-color: #fff;\n"
+"  background-color: #D3D3D3;\n"
 "  color: black;\n"
 "}\n"
 "\n"
@@ -3410,11 +5062,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.label_8 = QLabel(self.frame_4)
         self.label_8.setObjectName(u"label_8")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
-        self.label_8.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
+        self.label_8.setSizePolicy(sizePolicy5)
 
         self.verticalLayout_10.addWidget(self.label_8)
 
@@ -3460,8 +5112,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.label_5 = QLabel(self.frame)
         self.label_5.setObjectName(u"label_5")
-        sizePolicy3.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
-        self.label_5.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.label_5.sizePolicy().hasHeightForWidth())
+        self.label_5.setSizePolicy(sizePolicy4)
 
         self.verticalLayout_9.addWidget(self.label_5, 0, Qt.AlignHCenter)
 
@@ -3528,13 +5180,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.Pages.setCurrentIndex(0)
-        self.tabWidget_7.setCurrentIndex(1)
+        self.tabWidget_7.setCurrentIndex(0)
         self.tabWidget_6.setCurrentIndex(0)
         self.tabWidget_5.setCurrentIndex(0)
         self.tabWidget_4.setCurrentIndex(0)
         self.tabWidget_9.setCurrentIndex(0)
         self.tabWidget_8.setCurrentIndex(0)
-        self.tabWidget_3.setCurrentIndex(1)
+        self.tabWidget_3.setCurrentIndex(0)
         self.tabWidget_2.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
 
@@ -3544,7 +5196,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/imgs/_imgs/logo_2.jpg\"/></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/_imgs/_imgs/logo_2.jpg\"/></p></body></html>", None))
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.btn_menu_moradores.setText(QCoreApplication.translate("MainWindow", u"Moradores", None))
         self.btn_menu_agendamentos.setText(QCoreApplication.translate("MainWindow", u"Agendamentos", None))
@@ -3558,11 +5210,14 @@ class Ui_MainWindow(object):
         self.btn_menu_sobre.setText(QCoreApplication.translate("MainWindow", u"Sobre", None))
         self.btn_menu_contatos.setText(QCoreApplication.translate("MainWindow", u"Contatos", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:7pt; color:#ffffff;\">GHG</span></p></body></html>", None))
+#if QT_CONFIG(whatsthis)
+        self.toogle_Button.setWhatsThis(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/_imgs/_imgs/menu.png\"/></p></body></html>", None))
+#endif // QT_CONFIG(whatsthis)
         self.toogle_Button.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">SISTEMA DE CONDOM\u00cdNIO</span></p></body></html>", None))
-        self.lbl_logo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/imgs/_imgs/hero.png\"/></p><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">VARANDAS DO PRAIA</span></p></body></html>", None))
+        self.lbl_logo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/_imgs/_imgs/hero.png\"/></p><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">VARANDAS DO PRAIA</span></p></body></html>", None))
         self.btn_menu_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar Usu\u00e1rio", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/imgs/_imgs/user_1.png\"/></p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/_imgs/_imgs/user_1.png\"/></p></body></html>", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Nome:</span></p></body></html>", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Usu\u00e1rio:</span></p></body></html>", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600; color:#ffffff;\">Senha:</span></p></body></html>", None))
@@ -3611,9 +5266,63 @@ class Ui_MainWindow(object):
         self.label_72.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Observa\u00e7\u00f5es:</span></p></body></html>", None))
         self.btn_cadastrar_morador.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.tabWidget_7.setTabText(self.tabWidget_7.indexOf(self.tab_13), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
-        self.label_96.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisa Moradores</span></p></body></html>", None))
-        self.txt_pesquisa_nome_completo.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite uma pesquisa", None))
+        self.label_48.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; color:#ffffff;\">Pesquisar Morador</span></p></body></html>", None))
+        self.txt_pesquisa_apartamento_bloco.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome ", None))
         self.btn_pesquisar_morador.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem = self.tb_moradores.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem1 = self.tb_moradores.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Ap/Bloco", None));
+        ___qtablewidgetitem2 = self.tb_moradores.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem3 = self.tb_moradores.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem4 = self.tb_moradores.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem5 = self.tb_moradores.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem6 = self.tb_moradores.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem7 = self.tb_moradores.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem8 = self.tb_moradores.horizontalHeaderItem(8)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem9 = self.tb_moradores.horizontalHeaderItem(9)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem10 = self.tb_moradores.horizontalHeaderItem(10)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem11 = self.tb_moradores.horizontalHeaderItem(11)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem12 = self.tb_moradores.horizontalHeaderItem(12)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"Nome Completo", None));
+        ___qtablewidgetitem13 = self.tb_moradores.horizontalHeaderItem(13)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Data Nascimento", None));
+        ___qtablewidgetitem14 = self.tb_moradores.horizontalHeaderItem(14)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"Telefone1", None));
+        ___qtablewidgetitem15 = self.tb_moradores.horizontalHeaderItem(15)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"Telefone2", None));
+        ___qtablewidgetitem16 = self.tb_moradores.horizontalHeaderItem(16)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"Email1", None));
+        ___qtablewidgetitem17 = self.tb_moradores.horizontalHeaderItem(17)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"Email2", None));
+        ___qtablewidgetitem18 = self.tb_moradores.horizontalHeaderItem(18)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Veiculo1 Placa", None));
+        ___qtablewidgetitem19 = self.tb_moradores.horizontalHeaderItem(19)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"Veiculo1 Marca", None));
+        ___qtablewidgetitem20 = self.tb_moradores.horizontalHeaderItem(20)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Veiculo1 Modelo", None));
+        ___qtablewidgetitem21 = self.tb_moradores.horizontalHeaderItem(21)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Veiculo1 Cor", None));
+        ___qtablewidgetitem22 = self.tb_moradores.horizontalHeaderItem(22)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"Veiculo2 Placa", None));
+        ___qtablewidgetitem23 = self.tb_moradores.horizontalHeaderItem(23)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"Veiculo2 Marca", None));
+        ___qtablewidgetitem24 = self.tb_moradores.horizontalHeaderItem(24)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"Veiculo2 Modelo", None));
+        ___qtablewidgetitem25 = self.tb_moradores.horizontalHeaderItem(25)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Veiculo2 Cor", None));
+        ___qtablewidgetitem26 = self.tb_moradores.horizontalHeaderItem(26)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00f5es", None));
         self.tabWidget_7.setTabText(self.tabWidget_7.indexOf(self.tab_14), QCoreApplication.translate("MainWindow", u"Pesquisa", None))
         self.label_95.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Agendamentos</span></p></body></html>", None))
         self.label_66.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Apartamento/Bloco</span></p></body></html>", None))
@@ -3637,8 +5346,24 @@ class Ui_MainWindow(object):
         self.btn_registrar_agendamento.setText(QCoreApplication.translate("MainWindow", u"Agendar", None))
         self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_11), QCoreApplication.translate("MainWindow", u"Agendar", None))
         self.label_97.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisa Agendamentos</span></p></body></html>", None))
-        self.lineEdit_50.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite uma data", None))
+        self.txt_pesquisar_agendamentos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite uma data", None))
         self.btn_pesquisar_agendamentos.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem27 = self.tb_agendamentos.horizontalHeaderItem(0)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem28 = self.tb_agendamentos.horizontalHeaderItem(1)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Ap/Bloco", None));
+        ___qtablewidgetitem29 = self.tb_agendamentos.horizontalHeaderItem(2)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Nome Morador", None));
+        ___qtablewidgetitem30 = self.tb_agendamentos.horizontalHeaderItem(3)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"Local", None));
+        ___qtablewidgetitem31 = self.tb_agendamentos.horizontalHeaderItem(4)
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"Per\u00edodo", None));
+        ___qtablewidgetitem32 = self.tb_agendamentos.horizontalHeaderItem(5)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"Data Agendamento", None));
+        ___qtablewidgetitem33 = self.tb_agendamentos.horizontalHeaderItem(6)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"Funcion\u00e1rio", None));
+        ___qtablewidgetitem34 = self.tb_agendamentos.horizontalHeaderItem(7)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00f5es", None));
         self.tabWidget_6.setTabText(self.tabWidget_6.indexOf(self.tab_12), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_98.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registro de Visitantes</span></p></body></html>", None))
         self.label_44.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Data</span></p></body></html>", None))
@@ -3673,6 +5398,34 @@ class Ui_MainWindow(object):
         self.label_99.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisa Visitantes</span></p></body></html>", None))
         self.txt_pesquisa_visitantes.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_visitantes.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem35 = self.tb_visitantes.horizontalHeaderItem(0)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem36 = self.tb_visitantes.horizontalHeaderItem(1)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Data Visita", None));
+        ___qtablewidgetitem37 = self.tb_visitantes.horizontalHeaderItem(2)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Nome Visitante", None));
+        ___qtablewidgetitem38 = self.tb_visitantes.horizontalHeaderItem(3)
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"RG/CPF", None));
+        ___qtablewidgetitem39 = self.tb_visitantes.horizontalHeaderItem(4)
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"Visitando", None));
+        ___qtablewidgetitem40 = self.tb_visitantes.horizontalHeaderItem(5)
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"Ap/Bloco", None));
+        ___qtablewidgetitem41 = self.tb_visitantes.horizontalHeaderItem(6)
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"Hora Entrada", None));
+        ___qtablewidgetitem42 = self.tb_visitantes.horizontalHeaderItem(7)
+        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"Hora Sa\u00edda", None));
+        ___qtablewidgetitem43 = self.tb_visitantes.horizontalHeaderItem(8)
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"Quem Autorizou", None));
+        ___qtablewidgetitem44 = self.tb_visitantes.horizontalHeaderItem(9)
+        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"Vaga Utilizada", None));
+        ___qtablewidgetitem45 = self.tb_visitantes.horizontalHeaderItem(10)
+        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"Placa", None));
+        ___qtablewidgetitem46 = self.tb_visitantes.horizontalHeaderItem(11)
+        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"Marca", None));
+        ___qtablewidgetitem47 = self.tb_visitantes.horizontalHeaderItem(12)
+        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"Modelo", None));
+        ___qtablewidgetitem48 = self.tb_visitantes.horizontalHeaderItem(13)
+        ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"Cor", None));
         self.tabWidget_5.setTabText(self.tabWidget_5.indexOf(self.tab_10), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_100.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registro de Prestadores</span></p></body></html>", None))
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Nome da Empresa</span></p></body></html>", None))
@@ -3694,12 +5447,36 @@ class Ui_MainWindow(object):
         self.label_101.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar Prestadores</span></p></body></html>", None))
         self.lineEdit_22.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_prestadores.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem49 = self.tb_prestadores.horizontalHeaderItem(0)
+        ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem50 = self.tb_prestadores.horizontalHeaderItem(1)
+        ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"Nome Empresa", None));
+        ___qtablewidgetitem51 = self.tb_prestadores.horizontalHeaderItem(2)
+        ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"Tipo Servi\u00e7o", None));
+        ___qtablewidgetitem52 = self.tb_prestadores.horizontalHeaderItem(3)
+        ___qtablewidgetitem52.setText(QCoreApplication.translate("MainWindow", u"Data Servi\u00e7o", None));
+        ___qtablewidgetitem53 = self.tb_prestadores.horizontalHeaderItem(4)
+        ___qtablewidgetitem53.setText(QCoreApplication.translate("MainWindow", u"Hora Entrada", None));
+        ___qtablewidgetitem54 = self.tb_prestadores.horizontalHeaderItem(5)
+        ___qtablewidgetitem54.setText(QCoreApplication.translate("MainWindow", u"Hora Sa\u00edda", None));
+        ___qtablewidgetitem55 = self.tb_prestadores.horizontalHeaderItem(6)
+        ___qtablewidgetitem55.setText(QCoreApplication.translate("MainWindow", u"Nome Prestador", None));
+        ___qtablewidgetitem56 = self.tb_prestadores.horizontalHeaderItem(7)
+        ___qtablewidgetitem56.setText(QCoreApplication.translate("MainWindow", u"RG/CPF", None));
+        ___qtablewidgetitem57 = self.tb_prestadores.horizontalHeaderItem(8)
+        ___qtablewidgetitem57.setText(QCoreApplication.translate("MainWindow", u"Telefone", None));
+        ___qtablewidgetitem58 = self.tb_prestadores.horizontalHeaderItem(9)
+        ___qtablewidgetitem58.setText(QCoreApplication.translate("MainWindow", u"Contratante", None));
+        ___qtablewidgetitem59 = self.tb_prestadores.horizontalHeaderItem(10)
+        ___qtablewidgetitem59.setText(QCoreApplication.translate("MainWindow", u"Ap/Bloco", None));
+        ___qtablewidgetitem60 = self.tb_prestadores.horizontalHeaderItem(11)
+        ___qtablewidgetitem60.setText(QCoreApplication.translate("MainWindow", u"Quem Autorizou", None));
         self.tabWidget_4.setTabText(self.tabWidget_4.indexOf(self.tab_8), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_102.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registro de Encomendas</span></p></body></html>", None))
         self.label_81.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">N\u00famero de Protocolo</span></p></body></html>", None))
         self.txt_numero_protocolo.setPlaceholderText(QCoreApplication.translate("MainWindow", u" AUTO GENERATED", None))
         self.label_82.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Data e Hora do Recebimento</span></p></body></html>", None))
-        self.txt_data_hora_recebimento.setPlaceholderText(QCoreApplication.translate("MainWindow", u" dd/mm/aaaa \u00e0s -- : --", None))
+        self.txt_data_hora_recebimento.setPlaceholderText(QCoreApplication.translate("MainWindow", u" dd/mm/aaaa  \u00e0s   -- : --", None))
         self.label_83.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Nome do Destinat\u00e1rio</span></p></body></html>", None))
         self.txt_nome_destinatario.setPlaceholderText("")
         self.label_115.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Apartamento/Bloco</span></p></body></html>", None))
@@ -3726,6 +5503,34 @@ class Ui_MainWindow(object):
         self.label_103.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar  Encomendas</span></p></body></html>", None))
         self.txt_pesquisar_encomendas.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_encomendas.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem61 = self.tb_encomendas.horizontalHeaderItem(0)
+        ___qtablewidgetitem61.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem62 = self.tb_encomendas.horizontalHeaderItem(1)
+        ___qtablewidgetitem62.setText(QCoreApplication.translate("MainWindow", u"N\u00famero Protocolo", None));
+        ___qtablewidgetitem63 = self.tb_encomendas.horizontalHeaderItem(2)
+        ___qtablewidgetitem63.setText(QCoreApplication.translate("MainWindow", u"Data Hora Recebimento", None));
+        ___qtablewidgetitem64 = self.tb_encomendas.horizontalHeaderItem(3)
+        ___qtablewidgetitem64.setText(QCoreApplication.translate("MainWindow", u"Nome Destinat\u00e1rio", None));
+        ___qtablewidgetitem65 = self.tb_encomendas.horizontalHeaderItem(4)
+        ___qtablewidgetitem65.setText(QCoreApplication.translate("MainWindow", u"Ap/Bloco", None));
+        ___qtablewidgetitem66 = self.tb_encomendas.horizontalHeaderItem(5)
+        ___qtablewidgetitem66.setText(QCoreApplication.translate("MainWindow", u"N\u00famero Rastreamento", None));
+        ___qtablewidgetitem67 = self.tb_encomendas.horizontalHeaderItem(6)
+        ___qtablewidgetitem67.setText(QCoreApplication.translate("MainWindow", u"Tipo Encomenda", None));
+        ___qtablewidgetitem68 = self.tb_encomendas.horizontalHeaderItem(7)
+        ___qtablewidgetitem68.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o Encomenda", None));
+        ___qtablewidgetitem69 = self.tb_encomendas.horizontalHeaderItem(8)
+        ___qtablewidgetitem69.setText(QCoreApplication.translate("MainWindow", u"Empresa Entrega", None));
+        ___qtablewidgetitem70 = self.tb_encomendas.horizontalHeaderItem(9)
+        ___qtablewidgetitem70.setText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00f5es", None));
+        ___qtablewidgetitem71 = self.tb_encomendas.horizontalHeaderItem(10)
+        ___qtablewidgetitem71.setText(QCoreApplication.translate("MainWindow", u"Nome Entregador", None));
+        ___qtablewidgetitem72 = self.tb_encomendas.horizontalHeaderItem(11)
+        ___qtablewidgetitem72.setText(QCoreApplication.translate("MainWindow", u"RG/CPF", None));
+        ___qtablewidgetitem73 = self.tb_encomendas.horizontalHeaderItem(12)
+        ___qtablewidgetitem73.setText(QCoreApplication.translate("MainWindow", u"Porteiro", None));
+        ___qtablewidgetitem74 = self.tb_encomendas.horizontalHeaderItem(13)
+        ___qtablewidgetitem74.setText(QCoreApplication.translate("MainWindow", u"Quem Retirou", None));
         self.tabWidget_9.setTabText(self.tabWidget_9.indexOf(self.tab_18), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_104.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registro de Ocorr\u00eancias</span></p></body></html>", None))
         self.label_73.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">N\u00famero da Ocorr\u00eancia</span></p></body></html>", None))
@@ -3743,6 +5548,20 @@ class Ui_MainWindow(object):
         self.label_105.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar Ocorr\u00eancias</span></p></body></html>", None))
         self.txt_pesquisa_ocorrencia.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_ocorrencias.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem75 = self.tb_ocorrencias.horizontalHeaderItem(0)
+        ___qtablewidgetitem75.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem76 = self.tb_ocorrencias.horizontalHeaderItem(1)
+        ___qtablewidgetitem76.setText(QCoreApplication.translate("MainWindow", u"N\u00famero Protocolo", None));
+        ___qtablewidgetitem77 = self.tb_ocorrencias.horizontalHeaderItem(2)
+        ___qtablewidgetitem77.setText(QCoreApplication.translate("MainWindow", u"Data Ocorr\u00eancia", None));
+        ___qtablewidgetitem78 = self.tb_ocorrencias.horizontalHeaderItem(3)
+        ___qtablewidgetitem78.setText(QCoreApplication.translate("MainWindow", u"Nome Funcion\u00e1rio", None));
+        ___qtablewidgetitem79 = self.tb_ocorrencias.horizontalHeaderItem(4)
+        ___qtablewidgetitem79.setText(QCoreApplication.translate("MainWindow", u"Hora Registro", None));
+        ___qtablewidgetitem80 = self.tb_ocorrencias.horizontalHeaderItem(5)
+        ___qtablewidgetitem80.setText(QCoreApplication.translate("MainWindow", u"Data Registro", None));
+        ___qtablewidgetitem81 = self.tb_ocorrencias.horizontalHeaderItem(6)
+        ___qtablewidgetitem81.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o", None));
         self.tabWidget_8.setTabText(self.tabWidget_8.indexOf(self.tab_16), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_106.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registrar Funcion\u00e1rios</span></p></body></html>", None))
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Nome</span></p></body></html>", None))
@@ -3758,6 +5577,24 @@ class Ui_MainWindow(object):
         self.label_107.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar Funcion\u00e1rios</span></p></body></html>", None))
         self.txt_pesquisar_funcionario.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_funcionarios.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem82 = self.tb_funcionarios.horizontalHeaderItem(0)
+        ___qtablewidgetitem82.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem83 = self.tb_funcionarios.horizontalHeaderItem(1)
+        ___qtablewidgetitem83.setText(QCoreApplication.translate("MainWindow", u"Nome Funcion\u00e1rio", None));
+        ___qtablewidgetitem84 = self.tb_funcionarios.horizontalHeaderItem(2)
+        ___qtablewidgetitem84.setText(QCoreApplication.translate("MainWindow", u"Endere\u00e7o", None));
+        ___qtablewidgetitem85 = self.tb_funcionarios.horizontalHeaderItem(3)
+        ___qtablewidgetitem85.setText(QCoreApplication.translate("MainWindow", u"Bairro", None));
+        ___qtablewidgetitem86 = self.tb_funcionarios.horizontalHeaderItem(4)
+        ___qtablewidgetitem86.setText(QCoreApplication.translate("MainWindow", u"Cep", None));
+        ___qtablewidgetitem87 = self.tb_funcionarios.horizontalHeaderItem(5)
+        ___qtablewidgetitem87.setText(QCoreApplication.translate("MainWindow", u"Telefone", None));
+        ___qtablewidgetitem88 = self.tb_funcionarios.horizontalHeaderItem(6)
+        ___qtablewidgetitem88.setText(QCoreApplication.translate("MainWindow", u"Celular", None));
+        ___qtablewidgetitem89 = self.tb_funcionarios.horizontalHeaderItem(7)
+        ___qtablewidgetitem89.setText(QCoreApplication.translate("MainWindow", u"Email", None));
+        ___qtablewidgetitem90 = self.tb_funcionarios.horizontalHeaderItem(8)
+        ___qtablewidgetitem90.setText(QCoreApplication.translate("MainWindow", u"Observa\u00e7\u00f5es", None));
         self.tabWidget_3.setTabText(self.tabWidget_3.indexOf(self.tab_6), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_108.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Registrar Dom\u00e9sticos</span></p></body></html>", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Nome</span></p></body></html>", None))
@@ -3771,6 +5608,20 @@ class Ui_MainWindow(object):
         self.label_109.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar Dom\u00e9sticos</span></p></body></html>", None))
         self.txt_pesquisar_domesticos.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite um nome", None))
         self.btn_pesquisar_domesticos.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
+        ___qtablewidgetitem91 = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem91.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem92 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem92.setText(QCoreApplication.translate("MainWindow", u"Nome", None));
+        ___qtablewidgetitem93 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem93.setText(QCoreApplication.translate("MainWindow", u"Apartamento", None));
+        ___qtablewidgetitem94 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem94.setText(QCoreApplication.translate("MainWindow", u"Bloco", None));
+        ___qtablewidgetitem95 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem95.setText(QCoreApplication.translate("MainWindow", u"Fun\u00e7\u00e3o", None));
+        ___qtablewidgetitem96 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem96.setText(QCoreApplication.translate("MainWindow", u"Hor\u00e1rio", None));
+        ___qtablewidgetitem97 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem97.setText(QCoreApplication.translate("MainWindow", u"Telefone", None));
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_110.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Agendar Mudan\u00e7a</span></p></body></html>", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#ffffff;\">Data da Mudan\u00e7a</span></p></body></html>", None))
@@ -3789,6 +5640,27 @@ class Ui_MainWindow(object):
         self.btn_registrar_mudancas.setText(QCoreApplication.translate("MainWindow", u"Agendar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Agendar", None))
         self.label_111.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Pesquisar Mudan\u00e7a</span></p></body></html>", None))
+        self.txt_data_mudanca_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Digite sua pesquisa", None))
+        ___qtablewidgetitem98 = self.tableWidget_2.horizontalHeaderItem(0)
+        ___qtablewidgetitem98.setText(QCoreApplication.translate("MainWindow", u"Id", None));
+        ___qtablewidgetitem99 = self.tableWidget_2.horizontalHeaderItem(1)
+        ___qtablewidgetitem99.setText(QCoreApplication.translate("MainWindow", u"Data", None));
+        ___qtablewidgetitem100 = self.tableWidget_2.horizontalHeaderItem(2)
+        ___qtablewidgetitem100.setText(QCoreApplication.translate("MainWindow", u"Hor\u00e1rio", None));
+        ___qtablewidgetitem101 = self.tableWidget_2.horizontalHeaderItem(3)
+        ___qtablewidgetitem101.setText(QCoreApplication.translate("MainWindow", u"Nome Respons\u00e1vel", None));
+        ___qtablewidgetitem102 = self.tableWidget_2.horizontalHeaderItem(4)
+        ___qtablewidgetitem102.setText(QCoreApplication.translate("MainWindow", u"Apartamento", None));
+        ___qtablewidgetitem103 = self.tableWidget_2.horizontalHeaderItem(5)
+        ___qtablewidgetitem103.setText(QCoreApplication.translate("MainWindow", u"Bloco", None));
+        ___qtablewidgetitem104 = self.tableWidget_2.horizontalHeaderItem(6)
+        ___qtablewidgetitem104.setText(QCoreApplication.translate("MainWindow", u"Nome Empresa", None));
+        ___qtablewidgetitem105 = self.tableWidget_2.horizontalHeaderItem(7)
+        ___qtablewidgetitem105.setText(QCoreApplication.translate("MainWindow", u"Uso Elevador", None));
+        ___qtablewidgetitem106 = self.tableWidget_2.horizontalHeaderItem(8)
+        ___qtablewidgetitem106.setText(QCoreApplication.translate("MainWindow", u"Uso Escada", None));
+        ___qtablewidgetitem107 = self.tableWidget_2.horizontalHeaderItem(9)
+        ___qtablewidgetitem107.setText(QCoreApplication.translate("MainWindow", u"I\u00e7amento", None));
         self.btn_pesquisar_mudancas.setText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">SOBRE O SISTEMA</span></p></body></html>", None))
@@ -3796,8 +5668,8 @@ class Ui_MainWindow(object):
                         "s fun\u00e7\u00f5es para cadastro dos moradores por apartamento e bloco com o bot\u00e3o de cadastrar, tamb\u00e9m a fun\u00e7\u00e3o de pesquisar que pode ser realizada atrav\u00e9s do nome do morador ou pelo numero do apartamento seguido no numero do bloco.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Agendamentos:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">Faz o agendamento do sal\u00e3o de festas e dos quiosques.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Prestadores:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">fun\u00e7\u00e3o para cadastro de prestadores do condom\u00ednio e de apartamentos.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Encomendas: </span></p><p><span style=\" font-size:12pt; color:#ffffff;\">Tem a fun\u00e7\u00e3o de fazer o controle e distribui\u00e7\u00e3o das encomendas substituindo o livro de protocolo.</span></p><p><span style=\" font-size:14pt; fon"
                         "t-weight:600; color:#ffffff;\">Ocorr\u00eancias:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">Para registro geral de ocorr\u00eancias durante o expediente do porteiro.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Funcion\u00e1rios:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">Para registro de contatos dos funcion\u00e1rios do condom\u00ednio.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Dom\u00e9sticos:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">registrar a entrada de funcion\u00e1rios dos apartamentos.</span></p><p><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\">Mudan\u00e7as:</span></p><p><span style=\" font-size:12pt; color:#ffffff;\">Agendamento de entrada e sa\u00edda das mudan\u00e7as e registro de eventuais incidentes durante a mudan\u00e7as.</span></p><p><span style=\" color:#ffffff;\"><br/></span></p></body></html>", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">CONTATOS</span></p></body></html>", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/imgs/_imgs/whats.png\"/><span style=\" font-size:14pt; font-weight:600;\"/><span style=\" font-size:14pt; font-weight:600; color:#ffffff;\"/><span style=\" font-size:14pt; font-weight:600; color:#ffffff; vertical-align:super;\">(34) 99195-7588</span></p></body></html>", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/imgs/_imgs/email.png\"/><span style=\" font-size:14pt; font-weight:600; color:#ffffff; vertical-align:super;\">gilmargomes12@gmail.com</span></p></body></html>", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/_imgs/_imgs/whats.png\"/><span style=\" font-size:18pt; font-weight:600; color:#ffffff; vertical-align:super;\">(34) 99195-7588</span></p></body></html>", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/_imgs/_imgs/email.png\"/><span style=\" font-size:18pt; font-weight:600; color:#ffffff; vertical-align:super;\">gilmargomes12@gmail.com</span></p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:11pt; font-weight:600; color:#ffffff; vertical-align:super;\">2024 Copyright GHG</span></p></body></html>", None))
     # retranslateUi
 
